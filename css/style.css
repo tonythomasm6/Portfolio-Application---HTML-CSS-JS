@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background-color: do;
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
   font-size: 2.4rem;
@@ -106,17 +107,26 @@ body {
 .card {
   margin-left: 50px;
   margin-top: 50px;
-  width: 300px;
+  width: 280px;
   max-height: 100%;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  border-radius: 12px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
-  border-radius: 10px;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px 4px #73c2fb;
+  transform: scale(1.05);
 }
 
 .card-header {
-  background-color: #00d9ff;
+  background-color: dodgerblue;
   padding-left: 10px;
-  color: #1b133a;
+  padding-top: 10px;
+  color: white;
 }
 
 .award-name {
@@ -152,10 +162,34 @@ body {
 
   text-align: center;
 
-  margin: 1rem 0;
+  margin-bottom: 2rem;
   width: 250px;
   display: inline-block;
   background-color: #fff;
   color: #1b0760;
   border: 2px solid #1b0760;
+}
+
+/*Grid*/
+/* .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+} */
+
+/*Grids*/
+.grid {
+  display: grid;
+  padding: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
