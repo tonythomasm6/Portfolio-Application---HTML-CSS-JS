@@ -1,0 +1,84 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 2.4rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  fill: white;
+  margin-top: 3px;
+}
+.collapsible {
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.list {
+  list-style: none;
+  font-size: 2rem;
+}
+
+.nav {
+  background-color: black;
+}
+.nav__brand {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+.nav__item {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.nav__item > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__list {
+  width: 100%; /*To make list come in next line*/
+  padding-left: 2px;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s; /*To apply transition to all properties*/
+  margin: 0.5rem 1rem;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh; /*To make it take only space required.*/
+  opacity: 1;
+}
+
+/*Icon click and not clicked*/
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
