@@ -1,3 +1,15 @@
+:root {
+  /*Dark Theme*/
+  --color-background: #272935;
+  --color-font: white;
+  --color-icon: white;
+
+  /*Light theme*/
+  /* --color-background: #fff;
+  --color-font: black;
+  --color-icon: black; */
+}
+
 html {
   font-size: 62.5%;
 }
@@ -32,7 +44,7 @@ body {
 }
 
 .nav {
-  /* background-color: black; */
+  background-color: black;
   border-bottom: 1px solid #a8a8a8;
 }
 .nav__brand {
@@ -201,7 +213,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 100vh;
-  background-color: #272935;
+  background-color: var(--color-background); /*Dark Theme*/
+  color: var(--color-font);
+  /*background-color: white;  /*Light theme*/
 }
 
 .grid_box1 {
@@ -216,13 +230,11 @@ body {
 
 .welcome-title {
   font-family: Bungee;
-  color: white;
   transition: color 5s;
   font-size: 5rem;
 }
 
 .welcome-desc {
-  color: white;
   font-family: monospace;
 }
 .grid_box2 {
@@ -234,7 +246,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 540px;
-  border: 13px solid grey;
+  border: 8px solid grey;
 }
 
 .image--box {
@@ -252,4 +264,5 @@ body {
 .contact-icon {
   margin: 2rem 2rem;
   cursor: pointer;
+  color: var(--color-icon);
 }
